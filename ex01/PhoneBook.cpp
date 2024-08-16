@@ -85,3 +85,7 @@ void PhoneBook::Search()
     std::cout << "Darkest secret is => " << contact[index].getDarkestSecret() << std::endl;
     ;
 }
+void PhoneBook::Exit()
+{
+    std::exit(EXIT_SUCCESS);
+}

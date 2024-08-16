@@ -5,6 +5,5 @@ int main()
     PhoneBook PB;
     PB.AddContact();
     PB.Search();
-    
-    
+    PB.Exit();
 }

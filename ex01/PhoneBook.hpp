@@ -13,4 +13,5 @@ public:
     }
     void AddContact();
     void Search();
+    void Exit();
 };
