@@ -71,8 +71,17 @@ void PhoneBook::Search()
     }
     int index;
     std::cout << std::endl
-        << "Enter the index of the contact to display: ";
+              << "Enter the index of the contact to display: ";
     std::cin >> index;
     if (index < 0 || index >= ContactCount || std::cin.fail())
+    {
         std::cout << "Invalid index , Please try again.";
+        std::exit(EXIT_FAILURE);
+    }
+    std::cout << "First name is =>" << contact[index].getFirstName() << std::endl;
+    std::cout << "Last name is =>" << contact[index].getLastName() << std::endl;
+    std::cout << "Nickname is =>" << contact[index].getNickName() << std::endl;
+    std::cout << "Phone number is =>" << contact[index].getPhoneNumber() << std::endl;
+    std::cout << "Darkest secret is => " << contact[index].getDarkestSecret() << std::endl;
+    ;
 }
