@@ -18,7 +18,7 @@ std::string Contact::getPhoneNumber()
 }
 std::string Contact::getDarkestSecret()
 {
-    return (this->DarkestSecret);
+    return DarkestSecret;
 }
 void Contact::setFirstName(std::string FirstName)
 {

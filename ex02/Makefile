@@ -1,23 +1,23 @@
+# kitcompila bla flags
+
 FLAGS=c++ -Wall -Wextra -Werror -std=c++98
 
-NAME=megaphone
+NAME=Account
 
-SRC=megaphone.cpp 
+SRC=Account.cpp tests.cpp
 
 OBJ=$(SRC:.cpp=.o)
 
-all: $(NAME)
+all : $(NAME)
 
 $(NAME) : $(OBJ)
 	$(FLAGS) $(OBJ) -o $(NAME)
 
-%.o : %.cpp  
+%.o : %.cpp 
 	$(FLAGS) -c $< -o $@
 
 clean:
 	$(RM) $(OBJ)
-
 fclean: clean
 	$(RM) $(NAME)
-
-re: fclean all
+re: fclean all 

@@ -1,4 +1,6 @@
-FLAGS=c++ #-Wall -Wextra -Werror -std=c++98
+# kitcompila bla flags
+
+FLAGS=c++ -Wall -Wextra -Werror -std=c++98 -g -fsanitize=address
 
 NAME=PhoneBook
 
@@ -10,6 +12,10 @@ all : $(NAME)
 
 $(NAME) : $(OBJ)
 	$(FLAGS) $(OBJ) -o $(NAME)
+
+
+%.o : %.cpp
+	$(FLAGS) -c $< -o $@
 
 clean:
 	$(RM) $(OBJ)

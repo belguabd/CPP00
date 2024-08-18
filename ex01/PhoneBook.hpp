@@ -1,16 +1,15 @@
 #include "Contact.hpp"
+#include <iomanip>
 
 class PhoneBook
 {
 private:
     Contact contact[8];
-    int ContactCount;
+    static int _nbContact;
+    
 
 public:
-    PhoneBook()
-    {
-        this->ContactCount = 0;
-    }
+    PhoneBook(){};
     void AddContact();
     void Search();
     void Exit();

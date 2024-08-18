@@ -2,15 +2,24 @@
 
 int main(int ac, char *av[])
 {
+	std::string args;
+
 	if (ac != 1)
 	{
 		for (size_t i = 1; av[i]; i++)
 		{
-			for (size_t j = 0; av[i][j]; j++)
+			args = av[i];
+			for (size_t j = 0; args[j]; j++)
 			{
-				av[i][j] = std::toupper(av[i][j]);
+				args[j] = std::toupper(args[j]);
 			}
-			std::cout << av[i];
+			std::cout << args;
 		}
+		std::cout << std::endl;
+	}
+	else
+	{
+		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *\n";
+		return 0;
 	}
 }
