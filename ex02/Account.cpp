@@ -19,14 +19,14 @@ void Account::displayAccountsInfos(void)
 
 void Account::_displayTimestamp(void)
 {
-    time_t now = time(NULL);
+    std::time_t now = std::time(NULL);
     char buff[70];
-    struct tm timeInfo;
-
-    timeInfo = *localtime(&now);
-    strftime(buff, sizeof(timeInfo), "%Y%m%d%H%M%S", &timeInfo);
+    std::tm *timeInfo;
+    timeInfo = std::localtime(&now);
+    strftime(buff, sizeof(buff), "%Y%m%d%H%M%S", timeInfo);
     std::cout << "[" << buff << "]";
 }
+
 int Account::getNbAccounts()
 {
     return _nbAccounts;
@@ -131,7 +131,7 @@ Account::Account(int initial_deposit)
 Account::~Account()
 {
     _displayTimestamp();
-    std::cout << " index:" << _accountIndex<< ";"
+    std::cout << " index:" << _accountIndex << ";"
               << "amount:" << _amount << ";"
               << "closed" << std::endl;
 }
