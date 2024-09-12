@@ -1,6 +1,4 @@
-# kitcompila bla flags
-
-FLAGS=c++ -Wall -Wextra -Werror -std=c++98 -g -fsanitize=address
+FLAGS=c++ -Wall -Wextra -Werror -std=c++98 #-fsanitize=address
 
 NAME=PhoneBook
 

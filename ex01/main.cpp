@@ -4,6 +4,7 @@ int main()
 {
     PhoneBook PB;
     std::string command;
+
     while (true)
     {
         std::cout << "Enter command (ADD, SEARCH ,EXIT) : ";
@@ -13,7 +14,7 @@ int main()
             PB.AddContact();
         else if (command == "SEARCH")
             PB.Search();
-        else if (command == "qEXIT")
+        else if (command == "EXIT")
             break;
     }
 }

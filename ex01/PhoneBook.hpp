@@ -6,11 +6,11 @@ class PhoneBook
 private:
     Contact contact[8];
     static int _nbContact;
-    
+    static int _nbrContact;
 
 public:
-    PhoneBook(){};
     void AddContact();
     void Search();
     void Exit();
+
 };
