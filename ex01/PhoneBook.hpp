@@ -11,6 +11,6 @@ private:
 public:
     void AddContact();
     void Search();
-    void Exit();
+    void Exit(); 
 
-};
+}; 

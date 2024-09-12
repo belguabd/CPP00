@@ -66,19 +66,9 @@ void PhoneBook::AddContact()
 void PrintFormatted(std::string contact)
 {
     if (contact.size() > 10)
-    {
-        contact.resize(9);
-        std::cout << contact << "." << "|";
-    }
+        std::cout << std::setw(10) << contact.substr(0, 9) + "." << "|";
     else
-    {
-        for (size_t i = 0; i < 10 - contact.size(); i++)
-        {
-            std::cout << " ";
-        }
-        std::cout << contact;
-        std::cout << "|";
-    }
+        std::cout << std::setw(10) << contact << "|";
 }
 int skipSpaces(std::string contact)
 {
@@ -101,7 +91,7 @@ void PhoneBook::Search()
     }
     for (int i = 0; i < _nbrContact; i++)
     {
-        std::cout << "         " << i + 1 << "|";
+        std::cout << std::setw(10) << i + 1 << "|";
         std::string firstName = contact[i].getFirstName();
         PrintFormatted(firstName.substr(skipSpaces(firstName)));
         std::string lastName = contact[i].getLastName();
@@ -125,7 +115,7 @@ void PhoneBook::Search()
         std::cout << "Invalid index , please try again" << std::endl;
         return;
     }
-    std::cout << "         " << index + 1 << "|";
+    std::cout << std::setw(10) << index + 1 << "|";
     std::string firstName = contact[index].getFirstName();
     PrintFormatted(firstName.substr(skipSpaces(firstName)));
     std::string lastName = contact[index].getLastName();

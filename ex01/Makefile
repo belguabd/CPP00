@@ -1,4 +1,4 @@
-FLAGS=c++ -Wall -Wextra -Werror -std=c++98 #-fsanitize=address
+FLAGS=c++ -Wall -Wextra -Werror -std=c++98 
 
 NAME=PhoneBook
 
@@ -12,7 +12,7 @@ $(NAME) : $(OBJ)
 	$(FLAGS) $(OBJ) -o $(NAME)
 
 
-%.o : %.cpp
+%.o : %.cpp PhoneBook.hpp Contact.hpp
 	$(FLAGS) -c $< -o $@
 
 clean:

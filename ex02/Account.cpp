@@ -23,7 +23,7 @@ void Account::_displayTimestamp(void)
     char buff[70];
     std::tm *timeInfo;
     timeInfo = std::localtime(&now);
-    strftime(buff, sizeof(buff), "%Y%m%d%H%M%S", timeInfo);
+    std::strftime(buff, sizeof(buff), "%Y%m%d%H%M%S", timeInfo);
     std::cout << "[" << buff << "]";
 }
 

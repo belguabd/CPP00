@@ -1,4 +1,3 @@
-# kitcompila bla flags
 
 FLAGS=c++ -Wall -Wextra -Werror -std=c++98
 
@@ -13,7 +12,7 @@ all : $(NAME)
 $(NAME) : $(OBJ)
 	$(FLAGS) $(OBJ) -o $(NAME)
 
-%.o : %.cpp 
+%.o : %.cpp Account.hpp
 	$(FLAGS) -c $< -o $@
 
 clean:
